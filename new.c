@@ -39,4 +39,5 @@ int main(){
     q=binsearch(arr, 0, n-1, right);
     if(p.end!=n && q.start!=-1) num+=(q.start-p.end+1);
   }
+  printf("%d", num);
 }
