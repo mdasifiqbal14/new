@@ -26,6 +26,17 @@ int main(){
   int arr[]={1,2,4,5};
   int n=sizeof(arr)/sizeof(arr[0]);
   int find;
-  position p=binsearch(arr, 0, n-1, find);
-  printf("%d %d", p.start, p.end);
+  position p, q;
+  int i, left, right;
+  int a=1;
+  int b=10;
+  int num=0;
+
+  for(i=0;i<n;i++){
+    left=a-arr[i];
+    right=b-arr[i];
+    p=binsearch(arr, 0, n-1, left);
+    q=binsearch(arr, 0, n-1, right);
+    if(p.end!=n && q.start!=-1) num+=(q.start-p.end+1);
+  }
 }
