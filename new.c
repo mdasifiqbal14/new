@@ -25,7 +25,7 @@ position binsearch(int arr[], int start, int end, int find){
 int main(){
   int arr[]={1,2,4,5};
   int n=sizeof(arr)/sizeof(arr[0]);
-  int find=0;
+  int find;
   position p=binsearch(arr, 0, n-1, find);
   printf("%d %d", p.start, p.end);
 }
